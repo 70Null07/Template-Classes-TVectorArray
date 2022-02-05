@@ -1,0 +1,10 @@
+[Nov 24 2021 20:48:17] Error. Negative Input (Bellow Zero).
+[Nov 24 2021 20:48:17] Error. Negative Input (Bellow Zero).
+[Nov 24 2021 20:48:17] Error. Negative Input (Bellow Zero).
+[Nov 24 2021 20:48:17] Error. Negative Input (Bellow Zero).
+[Nov 24 2021 20:48:17] Error: Invalid input (variable is not in vector's range)
+[Nov 24 2021 21:05:23] Error. Negative Input (String).
+[Nov 24 2021 21:34:46] Error. Negative Input (Bellow Zero).
+[Nov 24 2021 21:34:46] Error. Negative Input (Bellow Zero).
+[Nov 24 2021 21:34:46] Error. Negative Input (Bellow Zero).
+[Nov 24 2021 21:34:46] Error. Negative Input (Bellow Zero).
