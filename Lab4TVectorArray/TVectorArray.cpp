@@ -1,15 +1,16 @@
 #include "TVectorArray.h"
 #include "Config.h"
 
+random_device rd;
+mt19937 mt(rd());
+
 T2DVector::T2DVector()
 {
-	random_device rd;   // non-deterministic generator
-	mt19937 gen(rd());
 	uniform_int_distribution<> dist(0, 100);
 	SomeVec.resize(4);
 	for (int i = 0; i < 4; i++)
 	{
-		SomeVec[i] = (double)dist(gen);
+		SomeVec[i] = (double)dist(mt);
 	}
 }
 
@@ -25,9 +26,8 @@ int T2DVector::LengthVec() const
 
 T2DVector&  T2DVector::operator = (double num)
 {
-	srand(num);
 	for (int i = 0; i < 4; i++) {
-		SomeVec[i] = (rand()*1000)/10000.;
+		SomeVec[i] = (mt()*1000.)/10000.;
 	}
 	return (*this);
 }
@@ -87,13 +87,11 @@ double operator += (double& i, T2DVector const& obj)
 
 T3DVector::T3DVector()
 {
-	random_device rd;   // non-deterministic generator
-	mt19937 gen(rd());
 	uniform_int_distribution<> dist(0, 100);
 	SomeVec.resize(6);
 	for (int i = 0; i < 6; i++)
 	{
-		SomeVec[i] = (double)dist(gen);
+		SomeVec[i] = (double)dist(mt);
 	}
 }
 T3DVector::T3DVector(const T3DVector& obj)
@@ -102,9 +100,8 @@ T3DVector::T3DVector(const T3DVector& obj)
 }
 T3DVector& T3DVector::operator = (double num)
 {
-	srand(num);
 	for (int i = 0; i < 6; i++) {
-		SomeVec[i] = (rand()*1000)/10000.;
+		SomeVec[i] = (mt()*1000.)/10000.;
 	}
 	return (*this);
 }
